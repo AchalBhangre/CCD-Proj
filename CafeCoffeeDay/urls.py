@@ -5,9 +5,9 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.INDEX, name='home'),
-    path('add', views.ADD, name='add'),
-    path('edit', views.EDIT, name='edit'),
-    path('update/<str:id>', views.UPDATE, name='update'),
-    path('delete/<str:id>', views.DELETE, name='update'),
+    path('', views.index, name='home'),
+    path('add', views.add, name='add'),
+    path('edit', views.edit, name='edit'),
+    path('update/<str:id>', views.update, name='update'),
+    path('delete/<str:id>', views.delete, name='update'),
 ]

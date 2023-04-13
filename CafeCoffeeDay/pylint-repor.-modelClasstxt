@@ -1,0 +1,21 @@
+************* Module CafeCoffeeDay.models
+models.py:6:0: C0303: Trailing whitespace (trailing-whitespace)
+models.py:7:14: C0326: Exactly one space required around assignment
+    coffeeName=models.CharField(max_length=200)
+              ^ (bad-whitespace)
+models.py:8:9: C0326: Exactly one space required around assignment
+    fName=models.CharField(max_length=300)
+         ^ (bad-whitespace)
+models.py:9:12: C0326: Exactly one space required after assignment
+    address =models.TextField()
+            ^ (bad-whitespace)
+models.py:10:9: C0326: Exactly one space required around assignment
+    price=models.IntegerField()
+         ^ (bad-whitespace)
+models.py:11:0: C0303: Trailing whitespace (trailing-whitespace)
+models.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+models.py:5:0: C0115: Missing class docstring (missing-class-docstring)
+
+-----------------------------------
+Your code has been rated at 0.00/10
+

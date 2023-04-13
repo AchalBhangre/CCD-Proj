@@ -1,0 +1,8 @@
+************* Module CafeCoffeeDay.models
+models.py:6:0: C0303: Trailing whitespace (trailing-whitespace)
+models.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+models.py:5:0: C0115: Missing class docstring (missing-class-docstring)
+
+------------------------------------------------------------------
+Your code has been rated at 6.25/10 (previous run: 6.25/10, +0.00)
+

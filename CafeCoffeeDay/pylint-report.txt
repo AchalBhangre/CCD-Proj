@@ -1,0 +1,51 @@
+************* Module CafeCoffeeDay.views
+views.py:26:0: C0330: Wrong hanging indentation.
+             )
+        |   |^ (bad-continuation)
+views.py:29:0: C0303: Trailing whitespace (trailing-whitespace)
+views.py:33:11: C0326: Exactly one space required before assignment
+    context= {
+           ^ (bad-whitespace)
+views.py:37:0: C0303: Trailing whitespace (trailing-whitespace)
+views.py:38:18: C0326: Exactly one space required after comma
+def update(request,id_):
+                  ^ (bad-whitespace)
+views.py:45:0: C0303: Trailing whitespace (trailing-whitespace)
+views.py:46:16: C0326: Exactly one space required around assignment
+        cafeshop=CafeCoffeeDay(
+                ^ (bad-whitespace)
+views.py:47:0: C0303: Trailing whitespace (trailing-whitespace)
+views.py:48:0: C0330: Wrong hanging indentation (remove 1 space).
+             id_=id,
+            |^ (bad-continuation)
+views.py:49:0: C0330: Wrong hanging indentation (remove 1 space).
+             f_name=f_name,
+            |^ (bad-continuation)
+views.py:50:0: C0330: Wrong hanging indentation (remove 1 space).
+             coffee_name=coffee_name,
+            |^ (bad-continuation)
+views.py:51:0: C0330: Wrong hanging indentation (remove 1 space).
+             address=address,
+            |^ (bad-continuation)
+views.py:52:0: C0330: Wrong hanging indentation (remove 1 space).
+             price=price
+            |^ (bad-continuation)
+views.py:53:0: C0330: Wrong hanging indentation.
+             )
+        |   |^ (bad-continuation)
+views.py:56:0: C0303: Trailing whitespace (trailing-whitespace)
+views.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+views.py:7:0: C0116: Missing function or method docstring (missing-function-docstring)
+views.py:9:15: E1101: Class 'CafeCoffeeDay' has no 'objects' member (no-member)
+views.py:30:0: C0116: Missing function or method docstring (missing-function-docstring)
+views.py:32:15: E1101: Class 'CafeCoffeeDay' has no 'objects' member (no-member)
+views.py:38:0: C0116: Missing function or method docstring (missing-function-docstring)
+views.py:38:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+views.py:38:19: W0613: Unused argument 'id_' (unused-argument)
+views.py:58:0: C0116: Missing function or method docstring (missing-function-docstring)
+views.py:60:15: E1101: Class 'CafeCoffeeDay' has no 'objects' member (no-member)
+views.py:2:0: W0611: Unused models imported from django.db (unused-import)
+
+--------------------------------------------------------------------
+Your code has been rated at -1.52/10 (previous run: -2.73/10, +1.21)
+
