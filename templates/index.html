@@ -22,15 +22,16 @@
 		font-size: 13px;
 	}
 	.table-wrapper {
-        background: #fff;
+        background: #151816;
         padding: 20px 25px;
         margin: 30px 0;
 		border-radius: 3px;
         box-shadow: 0 1px 1px rgba(0,0,0,.05);
+        opacity:60;
     }
 	.table-title {        
 		padding-bottom: 15px;
-		background: #435d7d;
+		background: #151816;
 		color: #fff;
 		padding: 16px 30px;
 		margin: -20px -25px 10px;
@@ -235,7 +236,7 @@
 		font-weight: normal;
 	}
 	#bg{
-    background-size: 1800px 900px;
+    background-size: 1000px 900px;
     background-repeat: no-repeat;
     background-position: top;
     background-attachment: fixed;
@@ -244,9 +245,28 @@ body {
   background-color: #151816;
 }
 
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
 </style>
   {% load static %}
-  <body id="bg" style="background-image: url('{% static 'images/c2.jpg' %}')";> 
+  <body class="responsive" id="bg" style="background-image: url('{% static 'images/beans.jpg' %}')";> 
   
 </div>
     <div class="container">
