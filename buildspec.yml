@@ -12,6 +12,7 @@ phases:
       - python --version
       - pylint $CODEBUILD_SRC_DIR/*.py
       - pylint $CODEBUILD_SRC_DIR/assignementproj/*.py
+      - pylint --disable=R,C0114 *.py **/*.py
 artifacts:
     files:
       - '**/*'
