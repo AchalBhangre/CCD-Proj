@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cafe Back of House Management</title>
+</head>
+<body>
+	<header>
+		<h1>Cafe Back of House Management</h1>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="#">Inventory Management</a></li>
+			<li><a href="#">Menu Management</a></li>
+			<li><a href="#">Order Management</a></li>
+			<li><a href="#">Staff Management</a></li>
+		</ul>
+	</nav>
+	<main>
+		<h2>Inventory Management</h2>
+		<form method="post">
+			{% csrf_token %}
+			<label for="item_name">Item Name:</label>
+			<input type="text" name="item_name" id="item_name"><br>
+			<label for="item_quantity">Item Quantity:</label>
+			<input type="number" name="item_quantity" id="item_quantity"><br>
+			<label for="item_cost">Item Cost:</label>
+			<input type="number" name="item_cost" id="item_cost"><br>
+			<input type="submit" value="Add Item">
+		</form>
+		<table>
+			<thead>
+				<tr>
+					<th>Item Name</th>
+					<th>Item Quantity</th>
+					<th>Item Cost</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for item in inventory %}
+				<tr>
+					<td>{{ item.name }}</td>
+					<td>{{ item.quantity }}</td>
+					<td>{{ item.cost }}</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</main>
+	<div>
+	    <form method="post">
+  {% csrf_token %}
+  <label for="item_name">Item Name:</label>
+  <input type="text" name="item_name" id="item_name"><br>
+
+  <label for="item_description">Item Description:</label>
+  <textarea name="item_description" id="item_description"></textarea><br>
+
+  <label for="item_price">Item Price:</label>
+  <input type="number" name="item_price" id="item_price"><br>
+
+  <label for="item_category">Item Category:</label>
+  <select name="item_category" id="item_category">
+    <option value="breakfast">Breakfast</option>
+    <option value="lunch">Lunch</option>
+    <option value="dinner">Dinner</option>
+    <option value="beverages">Beverages</option>
+  </select><br>
+
+  <label for="item_image">Item Image:</label>
+  <input type="file" name="item_image" id="item_image"><br>
+
+  <input type="submit" value="Add Item">
+</form>
+
+menu management
+
+<form method="post">
+  {% csrf_token %}
+  <label for="item_name">Item Name:</label>
+  <input type="text" name="item_name" id="item_name"><br>
+
+  <label for="item_description">Item Description:</label>
+  <textarea name="item_description" id="item_description"></textarea><br>
+
+  <label for="item_price">Item Price:</label>
+  <input type="number" name="item_price" id="item_price"><br>
+
+  <label for="item_category">Item Category:</label>
+  <select name="item_category" id="item_category">
+    <option value="appetizers">Appetizers</option>
+    <option value="entrees">Entrees</option>
+    <option value="desserts">Desserts</option>
+    <option value="beverages">Beverages</option>
+  </select><br>
+
+  <label for="item_image">Item Image:</label>
+  <input type="file" name="item_image" id="item_image"><br>
+
+  <label for="item_ingredients">Ingredients:</label>
+  <textarea name="item_ingredients" id="item_ingredients"></textarea><br>
+
+  <label for="item_allergens">Allergen Information:</label>
+  <textarea name="item_allergens" id="item_allergens"></textarea><br>
+
+  <input type="submit" value="Add Item">
+</form>
+
+
+staff management
+<form method="post">
+  {% csrf_token %}
+  <label for="staff_name">Staff Name:</label>
+  <input type="text" name="staff_name" id="staff_name"><br>
+
+  <label for="staff_email">Staff Email:</label>
+  <input type="email" name="staff_email" id="staff_email"><br>
+
+  <label for="staff_role">Staff Role:</label>
+  <select name="staff_role" id="staff_role">
+    <option value="chef">Chef</option>
+    <option value="server">Server</option>
+    <option value="bartender">Bartender</option>
+    <option value="manager">Manager</option>
+  </select><br>
+
+  <label for="staff_phone">Staff Phone Number:</label>
+  <input type="tel" name="staff_phone" id="staff_phone"><br>
+
+  <label for="staff_address">Staff Address:</label>
+  <textarea name="staff_address" id="staff_address"></textarea><br>
+
+  <label for="staff_start_date">Staff Start Date:</label>
+  <input type="date" name="staff_start_date" id="staff_start_date"><br>
+
+  <label for="staff_end_date">Staff End Date:</label>
+  <input type="date" name="staff_end_date" id="staff_end_date"><br>
+
+  <label for="staff_hourly_rate">Staff Hourly Rate:</label>
+  <input type="number" name="staff_hourly_rate" id="staff_hourly_rate"><br>
+
+  <label for="staff_profile_image">Staff Profile Image:</label>
+  <input type="file" name="staff_profile_image" id="staff_profile_image"><br>
+
+  <input type="submit" value="Add Staff">
+</form>
+
+
+
+	    
+	</div>
+	
+	<div>
+	
+	
+	from django.db import models
+
+class MenuItem(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.TextField()
+    price = models.DecimalField(max_digits=6, decimal_places=2)
+    image = models.ImageField(upload_to='menu_images/')
+    category = models.CharField(max_length=50, choices=(
+        ('appetizers', 'Appetizers'),
+        ('entrees', 'Entrees'),
+        ('desserts', 'Desserts'),
+        ('drinks', 'Drinks'),
+    ))
+
+class Staff(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    role = models.CharField(max_length=50, choices=(
+        ('chef', 'Chef'),
+        ('server', 'Server'),
+        ('bartender', 'Bartender'),
+        ('manager', 'Manager'),
+    ))
+    phone_number = models.CharField(max_length=20)
+    address = models.TextField()
+    start_date = models.DateField()
+    end_date = models.DateField(blank=True, null=True)
+    hourly_rate = models.DecimalField(max_digits=6, decimal_places=2)
+    profile_image = models.ImageField(upload_to='staff_images/')
+
+class Inventory(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.TextField()
+    quantity = models.IntegerField()
+    unit_price = models.DecimalField(max_digits=6, decimal_places=2)
+    supplier = models.CharField(max_length=100)
+
+
+	
+	</div>
+	
+	<footer>
+		<p>&copy; 2023 Cafe Back of House Management</p>
+	</footer>
+</body>
+</html>

@@ -29,7 +29,8 @@ SECRET_KEY = 'q(8f-0cprcns!cz$ofv&+(0j(^uo7)uf254p0z3a&&@a(w6%#m'
 DEBUG = True
 
 #ALLOWED_HOSTS = ['5faffac2a4f2461995c46990a7a525d3.vfs.cloud9.eu-west-1.amazonaws.com']
-ALLOWED_HOSTS = ['CoffeeProject-env.eba-9mr5ngvz.eu-west-1.elasticbeanstalk.com']
+#ALLOWED_HOSTS = ['CoffeeProject-env.eba-9mr5ngvz.eu-west-1.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
