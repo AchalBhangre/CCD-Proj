@@ -336,25 +336,28 @@
 
 </style>
   {% load static %}
-  <body> 
-
-    <!-- View the Menu Items List -->
- 
-    <div class="container">
-    	<div class="navbar-fixed">
+  <body>
+  
+    <div class="navbar-fixed">
         <nav class=" brown darken-2 ">
             <div class="nav-wrapper container">
               <a href="#" class="brand-logo">Beans’n Cream Cafe</a>
               <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
               <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="#"> Home<i class="material-icons left">home</i></a></li>
-                <li><a href="#addCoffeeModal">Back of House<i class="material-icons left">content_paste</i></a></li>
+                <li><a href="#section white center">Back of House<i class="material-icons left">content_paste</i></a></li>
                 <li><a href="#aboutus">About Us</a></li>
                 <li><a href="#contact">Contact Us</a></li>
               </ul>
             </div>
         </nav>
     </div>
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="#">Home<i class="material-icons left">home</i></a></li>
+        <li><a href="#section white center">Carte-du-Jour<i class="material-icons left">content_paste</i></a></li>
+        <li><a href="#aboutus">About Us</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+    </ul>
     
     <div class="slider">
         <ul class="slides">
@@ -381,6 +384,7 @@
             </li>
         </ul>
     </div>
+  
   
     <div class="container">
         <div class="table-wrapper">
@@ -438,9 +442,7 @@
         </div>
     </div>
     
-    <div>
-    
-    	{% load static %}
+    <div class="container">
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
@@ -652,11 +654,13 @@
 				</form>
 			</div>
 		</div>
-	
+	</div>
 	{% endfor %}
-	 </div>
-	 
- <div class="section white center" id="aboutus">
+
+    <div class="parallax-container">
+        <div class="parallax"><img src="https://cdn.pixabay.com/photo/2019/02/04/17/20/cafeteria-3975175_1280.jpg"></div>
+    </div>
+    <div class="section white center" id="aboutus">
         <div class="row container">
             <h2 class="header">About US</h2>
             <p class="gray-text text-darken-3">Beans’n Cream Cafe is a simple HTML website template provided by The Web Weavers. Feel free
@@ -679,9 +683,20 @@
             <h5 class="header">Variety of Coffee & Tea</h5>
         </div>
     </div>
-    <div class="parallax-container">
-        <div class="parallax"><img src="https://cdn.pixabay.com/photo/2019/02/04/17/20/cafeteria-3975175_1280.jpg"></div>
+      <div class="section white center">
+        <h2 class="header">Beans’n Cream Cafe</h2>
+        <div class="row container">
+            <div class="col l8 s12 center-align move">
+                Beans’n Cream Cafe is a simple HTML website template provided by The Web Weavers. Feel free
+                to use it for your cafe or coffee shop. This layout is a mobile and tablet friendly.
+                 You can download and use this HTML one-page template for your business.
+            </div>
+            <div class="col l4 s12 center">
+                <img src="https://cdn.pixabay.com/photo/2014/04/03/11/54/coffee-312521_1280.png" style="object-fit: contain;" height="200px" width="auto" alt="">
+            </div>
+        </div>
     </div>
+    
     <div class="section white center">
         <h3 class="header">What our customers say..</h3>
         <div class="carousel myreviews" style="margin-bottom: 30px;">
@@ -764,7 +779,7 @@
             </a>
         </div>
     </div>
-<footer class="brown darken-3" id="contact">
+    <footer class="brown darken-3" id="contact">
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">
@@ -803,6 +818,7 @@
             </div>
         </div>
     </footer>
+	 
    
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <!-- Compiled and minified JavaScript -->
@@ -820,7 +836,7 @@
         $('.slider' ).slider({full_width: true});
         });
     </script>
-    </body>
+</body>
 
 <script>
     

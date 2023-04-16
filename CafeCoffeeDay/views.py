@@ -91,4 +91,4 @@ def addMenu(request):
             item_category=item_category
             )
         menuitem.save()
-    return redirect('view_menu')
+    return redirect('home')
