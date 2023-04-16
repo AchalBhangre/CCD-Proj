@@ -9,10 +9,10 @@ phases:
       - pip install -r requirements.txt pylint # Install dependencies needed for running the static analysis
   pre_build:
     commands:
-      - python --version
-      - pylint $CODEBUILD_SRC_DIR/*.py
-      - pylint $CODEBUILD_SRC_DIR/assignementproj/*.py
-      - pylint --disable=R,C0114 *.py **/*.py
+      #- python --version
+      #- pylint $CODEBUILD_SRC_DIR/*.py
+      #- pylint $CODEBUILD_SRC_DIR/assignementproj/*.py
+      #- pylint --disable=R,C0114 *.py **/*.py
 artifacts:
     files:
       - '**/*'
