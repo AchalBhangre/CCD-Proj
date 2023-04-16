@@ -12,13 +12,20 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Import Google Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Pacifico&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d6a8ce8d77.js" crossorigin="anonymous"></script>
 
 <style>
 
   body {
         color: #566787;
 		background: #151816;
-		font-family: 'Varela Round', sans-serif;
+		font-family: 'Bree Serif', serif;
 		font-size: 13px;
 	}
 	.table-wrapper {
@@ -207,7 +214,7 @@
 		max-width: 400px;
 	}
 	.modal .modal-header, .modal .modal-body, .modal .modal-footer {
-		padding: 20px 30px;
+		padding: 10px 50px;
 	}
 	.modal .modal-content {
 		border-radius: 3px;
@@ -260,22 +267,132 @@
     width: 100%;
   }
 }
+</style>
+
+    <script src="https://kit.fontawesome.com/d6a8ce8d77.js" crossorigin="anonymous"></script>
+    <title>Beans’n Cream Cafe</title>
+    <style>
+      html{
+            scroll-behavior: smooth;
+        }
+        .slider .indicators .indicator-item.active{
+           background-color:#6f4037 ; 
+        }
+        .move{
+            margin-top: 60px;
+            margin-bottom: 20px;
+            font-family: 'Bree Serif', serif;
+        }
+        .parallax-container{
+            min-height: 280px;
+            height: auto;
+        }
+        .brand-logo{
+            font-family: 'Bree Serif', serif;
+            font-size: 3rem !important;
+        }
+        #nav-mobile{
+            font-family: 'Bree Serif', serif;
+            font-size: 2rem !important;
+        }
+        .sidenav{
+            font-family: 'Bree Serif', serif;
+            font-size: 2rem !important;
+        }
+        .slider h3{
+            font-family: 'Pacifico', cursive;
+            
+        }
+        .slider h5{
+            font-family: 'Bree Serif', serif;
+        }
+        .header{
+            font-family: 'Pacifico', cursive;
+        }
+        .card-title{
+            font-family: 'Bree Serif', serif;
+        }
+        .card-reveal p{
+            font-family: 'Pacifico', cursive;
+        }
+        #aboutus p{
+            font-family: 'Bree Serif', serif;
+        }
+        .carousel-item p{
+            font-family: 'Bree Serif', serif;
+        }
+        .carousel-item span{
+            font-family: 'Pacifico', cursive;
+        }
+        footer h4{
+            font-family: 'Bree Serif', serif;
+        }
+        footer p{
+            font-family: 'Pacifico', cursive;
+        }
+        footer li{
+            font-family: 'Pacifico', cursive;
+        }
 
 </style>
   {% load static %}
-  <body class="responsive" id="bg" style="background-image: url('{% static 'images/beans.jpg' %}')";> 
+  <body> 
+
+    <!-- View the Menu Items List -->
+ 
+    <div class="container">
+    	<div class="navbar-fixed">
+        <nav class=" brown darken-2 ">
+            <div class="nav-wrapper container">
+              <a href="#" class="brand-logo">Beans’n Cream Cafe</a>
+              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#"> Home<i class="material-icons left">home</i></a></li>
+                <li><a href="#addCoffeeModal">Back of House<i class="material-icons left">content_paste</i></a></li>
+                <li><a href="#aboutus">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+              </ul>
+            </div>
+        </nav>
+    </div>
+    
+    <div class="slider">
+        <ul class="slides">
+            <li>
+                <img src="https://cdn.pixabay.com/photo/2017/07/31/19/27/coffee-2560260_1280.jpg" alt="">
+                <div class="caption center-align white-text ">
+                    <h3>Beans’n Cream Cafe</h3>
+                    <h5 class="light text-lighten-3">All you need to feel better.</h5>
+                </div>
+            </li>
+            <li>
+                <img src="https://cdn.pixabay.com/photo/2015/09/01/21/00/coffee-917613_1280.jpg" alt="">
+                <div class="caption center-align white-text">
+                    <h3>Beans’n Cream Cafe</h3>
+                    <h5 class="light text-lighten-3">We serve one of the best coffee around.</h5>
+                </div>
+            </li>
+            <li>
+                <img src="https://cdn.pixabay.com/photo/2013/11/05/23/55/coffee-206142_1280.jpg" alt="">
+                <div class="caption center-align white-text">
+                    <h3>Beans’n Cream Cafe</h3>
+                    <h5 class="light text-lighten-3">Welcome to the dublic City Center cafeShop Back of House!</h5>
+                </div>
+            </li>
+        </ul>
+    </div>
   
-</div>
     <div class="container">
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
-                    <div class="col-sm-6">
-						<h2>CupFul <b>COFFEESHOP</b></h2>
+                    <div class="caption left-align white-text ">
+						<h2>Staff_List</b></h2>
 					</div>
-					<div class="col-sm-6">
-						<a href="#addCoffeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add Your Coffee Table</span></a>
+					<div class="caption right-align white-text ">
+						<a href="#addCoffeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Staff Record</span></a>
 						<a href="#deleteCoffeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete</span></a>						
+		
 					</div>
                 </div>
             </div>
@@ -288,10 +405,10 @@
 								<label for="selectAll"></label>
 							</span>
 						</th>
-						<th>Your Name</th>
-                        <th>Coffee Name</th>
-						<th>Address</th>
-                        <th>Price</th>
+						<th>Staff Name</th>
+                        <th>Staff Role</th>
+						<th>Staff Address details</th>
+                        <th>Staff Hourly Rate</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -320,32 +437,100 @@
 			
         </div>
     </div>
-	<!-- Edit Modal HTML -->
+    
+    <div>
+    
+    	{% load static %}
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="caption left-align white-text ">
+						<h2>Menu_List</b></h2>
+					</div>
+					<div class="caption right-align white-text ">
+						
+						<a href="#removeMenuCoffeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Remove Item From List</span></a>						
+						<a href="#addMenuCoffeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Menu Record</span></a>
+
+					</div>
+                </div>
+            </div>
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+						<th>
+							<span class="custom-checkbox">
+								<input type="checkbox" id="selectAll">
+								<label for="selectAll"></label>
+							</span>
+						</th>
+						<th>Item_Name</th>
+                        <th>Item_Description</th>
+                        <th>Item_Category</th>
+                        <th>Item_Ingredients</th>
+                        <th>Item_Price</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                	{% for m in menuitem %}
+                    <tr>
+						<td>
+							<span class="custom-checkbox">
+								<input type="checkbox" id="checkbox1" name="options[]" value="1">
+								<label for="checkbox1"></label>
+							</span>
+						</td>
+						<td>{{m.item_name}}</td>
+                        <td>{{m.item_description}}</td>
+                        <td>{{m.item_price}}</td>
+                        <td>{{m.item_ingredients}}</td>
+                        <td>{{m.item_category}}</td>
+                         <td>
+                            <a href="#editCoffeeModal-{{forloop.counter}}" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                            <a href="#deleteCoffeeModal-{{forloop.counter}}" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                        </td>
+                    </tr>
+                    					
+					{% endfor %}
+                </tbody>
+            </table>
+		 </div>
+    </div>
+   
+    
+	<!-- Add Modal HTML -->
 	<div id="addCoffeeModal" class="modal fade">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<form action="{% url 'add' %}" method="post">
 					{% csrf_token %}
 					<div class="modal-header">						
-						<h4 class="modal-title">Book Your COFFEE Table</h4>
+						<h4 class="modal-title">Register New Staff</h4>
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					</div>
 					<div class="modal-body">					
 						
 						<div class="form-group">
-							<label>Your Name</label>
+							<label>Staff Full Name</label>
 							<input name="fName" type="text" class="form-control" required>
 						</div>
 						<div class="form-group">
-							<label>Coffee Name</label>
-							<input name="coffeeName" type="text" class="form-control" required>
+							<label>Staff Role</label>
+							<select name="coffeeName" id="coffeeName" class="form-control" >
+    						<option value="chef">Chef</option>
+    						<option value="server">Server</option>
+    						<option value="bartender">Bartender</option>
+    						<option value="manager">Manager</option>
+ 						 </select>
+							<!--<input name="coffeeName" type="text" class="form-control" required>-->
 						</div>
 						<div class="form-group">
-							<label>Address</label>
+							<label>Staff Address with Contact Deatils</label>
 							<textarea name="address" class="form-control" required></textarea>
 						</div>
 						<div class="form-group">
-							<label>Price</label>
+							<label>Staff Hourly Rate</label>
 							<input name="price" type="text" class="form-control" required>
 						</div>					
 					</div>
@@ -357,6 +542,55 @@
 			</div>
 		</div>
 	</div>
+
+	<div id="addMenuCoffeeModal" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<form action="{% url 'addMenu' %}" method="post">
+					{% csrf_token %}
+					<div class="modal-header">						
+						<h4 class="modal-title">New Item Record</h4>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					</div>
+					<div class="modal-body">
+						<div class="form-group">
+							<label>Item Name:</label>
+							<input name="item_name" type="text" class="form-control" required>
+						</div>
+							<div class="form-group">
+							<label>Item Description</label>
+							<textarea name="item_description" class="form-control" required></textarea>
+						</div>
+						
+						<div class="form-group">
+							<label>Item Category</label>
+    					<select name="item_category" id="item_category" class="form-control"required>
+    						<option value="appetizers">Appetizers</option>
+    						<option value="entrees">Entrees</option>
+    						<option value="desserts">Desserts</option>
+    						<option value="beverages">Beverages</option>
+ 						 </select>
+							<!--<input name="coffeeName" type="text" class="form-control" required>-->
+						</div>
+							<div class="form-group">
+							<label>Ingredients :</label>
+							<textarea name="item_ingredients" class="form-control" required></textarea>
+						</div>
+					
+						<div class="form-group">
+							<label>Item Price</label>
+							<input name="item_price" type="number" class="form-control" required>
+						</div>					
+					</div>
+					<div class="modal-footer">
+						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+						<input type="submit" class="btn btn-success" value="AddMenu">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
 	<!-- Edit Modal HTML -->
 	{% for i in cafeshop %}
 	<div id="editCoffeeModal-{{forloop.counter}}" class="modal fade">
@@ -395,6 +629,8 @@
 		</div>
 	</div>
 	{% endfor %}
+	
+
 	<!-- Delete Modal HTML -->
 	{% for i in cafeshop %}
 	<div id="deleteCoffeeModal-{{forloop.counter}}" class="modal fade">
@@ -416,9 +652,175 @@
 				</form>
 			</div>
 		</div>
-	</div>
+	
 	{% endfor %}
-</body>
+	 </div>
+	 
+ <div class="section white center" id="aboutus">
+        <div class="row container">
+            <h2 class="header">About US</h2>
+            <p class="gray-text text-darken-3">Beans’n Cream Cafe is a simple HTML website template provided by The Web Weavers. Feel free
+                to use it for your cafe or coffee shop. This layout is a mobile and tablet friendly.
+                 You can download and use this HTML one-page template for your business.</p>
+            <a href="#" class="btn waves-effect waves-light brown darken-2">Read More</a>
+        </div>
+    </div>
+    <div class="row" style="padding-left: 50px; padding-right: 50px;">
+        <div class="col s12 l4 center" style="padding: 50px;">
+            <i class="material-icons large brown-text text-darken-3">local_dining</i>
+            <h5 class="header">Variety of Coffee & Tea</h5>
+        </div>
+        <div class="col s12 l4 center" style="padding: 50px;">
+            <i class="material-icons large brown-text text-darken-3">watch_later</i>
+            <h5 class="header">Variety of Coffee & Tea</h5>
+        </div>
+        <div class="col s12 l4 center" style="padding: 50px;">
+            <i class="material-icons large brown-text text-darken-3">favorite</i>
+            <h5 class="header">Variety of Coffee & Tea</h5>
+        </div>
+    </div>
+    <div class="parallax-container">
+        <div class="parallax"><img src="https://cdn.pixabay.com/photo/2019/02/04/17/20/cafeteria-3975175_1280.jpg"></div>
+    </div>
+    <div class="section white center">
+        <h3 class="header">What our customers say..</h3>
+        <div class="carousel myreviews" style="margin-bottom: 30px;">
+            <a href="#" class="carousel-item">
+                <div class="row">
+                    <div class="col s12">
+                        <div class="card panel brown darken-3">
+                            <span class="white-text">One Review</span>
+                            <p class="white-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                                Nulla iste iusto doloribus sint excepturi assumenda ea cum veniam quibusdam exercitationem molestiae nam eligendi minima, repellendus, vel sapiente modi vero deserunt?</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="carousel-item">
+                <div class="row">
+                    <div class="col s12">
+                        <div class="card panel brown darken-3">
+                            <span class="white-text">One Review</span>
+                            <p class="white-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                                Nulla iste iusto doloribus sint excepturi assumenda ea cum veniam quibusdam exercitationem molestiae nam eligendi minima, repellendus, vel sapiente modi vero deserunt?</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="carousel-item">
+                <div class="row">
+                    <div class="col s12">
+                        <div class="card panel brown darken-3">
+                            <span class="white-text">One Review</span>
+                            <p class="white-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                                Nulla iste iusto doloribus sint excepturi assumenda ea cum veniam quibusdam exercitationem molestiae nam eligendi minima, repellendus, vel sapiente modi vero deserunt?</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="carousel-item">
+                <div class="row">
+                    <div class="col s12">
+                        <div class="card panel brown darken-3">
+                            <span class="white-text">One Review</span>
+                            <p class="white-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                                Nulla iste iusto doloribus sint excepturi assumenda ea cum veniam quibusdam exercitationem molestiae nam eligendi minima, repellendus, vel sapiente modi vero deserunt?</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="carousel-item">
+                <div class="row">
+                    <div class="col s12">
+                        <div class="card panel brown darken-3">
+                            <span class="white-text">One Review</span>
+                            <p class="white-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                                Nulla iste iusto doloribus sint excepturi assumenda ea cum veniam quibusdam exercitationem molestiae nam eligendi minima, repellendus, vel sapiente modi vero deserunt?</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="carousel-item">
+                <div class="row">
+                    <div class="col s12">
+                        <div class="card panel brown darken-3">
+                            <span class="white-text">One Review</span>
+                            <p class="white-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                                Nulla iste iusto doloribus sint excepturi assumenda ea cum veniam quibusdam exercitationem molestiae nam eligendi minima, repellendus, vel sapiente modi vero deserunt?</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="carousel-item">
+                <div class="row">
+                    <div class="col s12">
+                        <div class="card panel brown darken-3">
+                            <span class="white-text">One Review</span>
+                            <p class="white-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                                Nulla iste iusto doloribus sint excepturi assumenda ea cum veniam quibusdam exercitationem molestiae nam eligendi minima, repellendus, vel sapiente modi vero deserunt?</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+<footer class="brown darken-3" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h4 class="white-text">Contact Us</h4>
+                    <p class="grey-text">
+                        <i class="material-icons left">home</i>
+                        Jyoti Vihar, Burla <br>
+                        Sambalpur, Orissa - 768019
+                    </p>
+                    <p class="grey-text">
+                        <i class="material-icons left">phone</i>
+                        +91 9861292067,7077806097
+                    </p>
+                </div>
+                <div class="col l6 s12">
+                    <h4 class="white-text">Social Media</h4>
+                    <ul>
+                        <li><a href="#" class="grey-text fab fa-facebook-f"> Facebook</a></li>
+                        <li><a href="#" class="grey-text fab fa-twitter"> Twitter</a></li>
+                        <li><a href="https://www.instagram.com/the_web_weavers/" class="grey-text fab fa-instagram"> Instagram</a></li>
+                        <li><a href="mailto:amishmishra999@gmail.com" class="grey-text fa fa-envelope"> Email</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row brown darken-4">
+            <div class="col l6 s12">
+               <p class="white-text">
+                   &copy;Beans’n Cream Cafe
+               </p> 
+            </div>
+            <div class="col l6 s12">
+                <p class="white-text right">
+                    Designed By,The Web Weavers
+                </p>
+            </div>
+        </div>
+    </footer>
+   
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        $('.modal').modal();
+        $('.sidenav').sidenav();
+        $('.parallax').parallax();
+        $('.myreviews').carousel({
+            numVisible:7,
+            shift:55,
+            padding:55,
+        });
+        $('.slider' ).slider({full_width: true});
+        });
+    </script>
+    </body>
 
 <script>
     
@@ -467,4 +869,5 @@ div.desc {
   text-align: center;
 }
 </script>
+
 </html>

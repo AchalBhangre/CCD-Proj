@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Import Google Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Pacifico&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d6a8ce8d77.js" crossorigin="anonymous"></script>
+    <title>Beans’n Cream Cafe</title>
+    <style>
+      html{
+            scroll-behavior: smooth;
+        }
+        .slider .indicators .indicator-item.active{
+           background-color:#6f4037 ; 
+        }
+        .move{
+            margin-top: 60px;
+            margin-bottom: 20px;
+            font-family: 'Bree Serif', serif;
+        }
+        .parallax-container{
+            min-height: 280px;
+            height: auto;
+        }
+        .brand-logo{
+            font-family: 'Bree Serif', serif;
+            font-size: 3rem !important;
+        }
+        #nav-mobile{
+            font-family: 'Bree Serif', serif;
+            font-size: 2rem !important;
+        }
+        .sidenav{
+            font-family: 'Bree Serif', serif;
+            font-size: 2rem !important;
+        }
+        .slider h3{
+            font-family: 'Pacifico', cursive;
+            
+        }
+        .slider h5{
+            font-family: 'Bree Serif', serif;
+        }
+        .header{
+            font-family: 'Pacifico', cursive;
+        }
+        .card-title{
+            font-family: 'Bree Serif', serif;
+        }
+        .card-reveal p{
+            font-family: 'Pacifico', cursive;
+        }
+        #aboutus p{
+            font-family: 'Bree Serif', serif;
+        }
+        .carousel-item p{
+            font-family: 'Bree Serif', serif;
+        }
+        .carousel-item span{
+            font-family: 'Pacifico', cursive;
+        }
+        footer h4{
+            font-family: 'Bree Serif', serif;
+        }
+        footer p{
+            font-family: 'Pacifico', cursive;
+        }
+        footer li{
+            font-family: 'Pacifico', cursive;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar-fixed">
+        <nav class=" brown darken-2 ">
+            <div class="nav-wrapper container">
+                <a href="#" class="brand-logo">Beans’n Cream Cafe</a>
+              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#"> Home<i class="material-icons left">home</i></a></li>
+                <li><a href="#menu">Carte-du-Jour<i class="material-icons left">content_paste</i></a></li>
+                <li><a href="#aboutus">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+              </ul>
+            </div>
+        </nav>
+    </div>
+<form action="{% url 'sign_out' %}" method="post">
+					{% csrf_token %}
+         
+          {{ form.as_p }}
+          <div>
+                    
+              <button type="submit">Sign In</button>
+             
+              {% if user.is_authenticated %}
+                    <div> You are signed in as {{user.username}}...
+                    <a href="{% url 'sign_out' %}">Sign out</a>
+                    
+              {% else %}
+                    <a href="{% url 'sign_in' %}">Sign in</a> |
+                    <a href="{% url 'users:sign_up' %}">Sign up</a>
+                {% endif %}
+          </div>
+          <p></p>
+          <div>
+              If you don't have an account yet
+              If you have an account <a  href="{% url 'sign_in' %}">Sign In</a>
+          </div>
+</form> 
+           
+                
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        $('.modal').modal();
+        $('.sidenav').sidenav();
+        $('.parallax').parallax();
+        $('.myreviews').carousel({
+            numVisible:7,
+            shift:55,
+            padding:55,
+        });
+        $('.slider' ).slider({full_width: true});
+        });
+    </script>
+</body>
+</html>

@@ -194,6 +194,130 @@ class Inventory(models.Model):
 	
 	</div>
 	
+	<div>
+	    from django.shortcuts import render, get_object_or_404, redirect
+from .models import MenuItem, Staff, Inventory
+from .forms import MenuItemForm, StaffForm, InventoryForm
+
+def menu_list(request):
+    menu_items = MenuItem.objects.all()
+    return render(request, 'menu_list.html', {'menu_items': menu_items})
+
+def menu_detail(request, pk):
+    menu_item = get_object_or_404(MenuItem, pk=pk)
+    return render(request, 'menu_detail.html', {'menu_item': menu_item})
+
+def menu_create(request):
+    form = MenuItemForm(request.POST or None, request.FILES or None)
+    if form.is_valid():
+        form.save()
+        return redirect('menu_list')
+    return render(request, 'menu_form.html', {'form': form})
+
+def menu_update(request, pk):
+    menu_item = get_object_or_404(MenuItem, pk=pk)
+    form = MenuItemForm(request.POST or None, request.FILES or None, instance=menu_item)
+    if form.is_valid():
+        form.save()
+        return redirect('menu_list')
+    return render(request, 'menu_form.html', {'form': form})
+
+def menu_delete(request, pk):
+    menu_item = get_object_or_404(MenuItem, pk=pk)
+    if request.method == 'POST':
+        menu_item.delete()
+        return redirect('menu_list')
+    return render(request, 'menu_confirm_delete.html', {'menu_item': menu_item})
+
+def staff_list(request):
+    staff_members = Staff.objects.all()
+    return render(request, 'staff_list.html', {'staff_members': staff_members})
+
+def staff_detail(request, pk):
+    staff_member = get_object_or_404(Staff, pk=pk)
+    return render(request, 'staff_detail.html', {'staff_member': staff_member})
+
+def staff_create(request):
+    form = StaffForm(request.POST or None, request.FILES or None)
+    if form.is_valid():
+        form.save()
+        return redirect('staff_list')
+    return render(request, 'staff_form.html', {'form': form})
+
+def staff_update(request, pk):
+    staff_member = get_object_or_404(Staff, pk=pk)
+    form = StaffForm(request.POST or None, request.FILES or None, instance=staff_member)
+    if form.is_valid():
+        form.save()
+        return redirect('staff_list')
+    return render(request, 'staff_form.html', {'form': form})
+
+def staff_delete(request, pk):
+    staff_member = get_object_or_404(Staff, pk=pk)
+    if request.method == 'POST':
+        staff_member.delete()
+        return redirect('staff_list')
+    return render(request, 'staff_confirm_delete.html', {'staff_member': staff_member})
+
+def inventory_list(request):
+    inventory_items = Inventory.objects.all()
+    return render(request, 'inventory_list.html', {'inventory_items': inventory_items})
+
+def inventory_detail(request, pk):
+    inventory_item = get_object_or_404(Inventory, pk=pk)
+    return render(request, 'inventory_detail.html', {'inventory_item': inventory_item})
+
+def inventory_create(request):
+    form = InventoryForm(request.POST or None, request.FILES or None)
+    if form.is_valid():
+        form.save()
+        return redirect('inventory_list')
+    return render(request, 'inventory_form.html', {'form': form})
+
+def inventory_update(request, pk):
+    inventory_item = get_object_or_404(Inventory, pk=pk)
+    form = InventoryForm(request.POST or None, request.FILES or None, instance=inventory_item)
+    if form.is_valid():
+        form.save()
+        return redirect('inventory_list')
+    return render(request, 'inventory_form.html', {'form': form})
+
+def inventory_delete(request, pk):
+
+	    
+	    
+	</div>
+	<div>
+	    from django.urls import path
+from . import views
+
+urlpatterns = [
+    # Menu
+    path('menu/', views.menu_list, name='menu_list'),
+    path('menu/<int:pk>/', views.menu_detail, name='menu_detail'),
+    path('menu/new/', views.menu_create, name='menu_create'),
+    path('menu/<int:pk>/edit/', views.menu_update, name='menu_update'),
+    path('menu/<int:pk>/delete/', views.menu_delete, name='menu_delete'),
+
+    # Staff
+    path('staff/', views.staff_list, name='staff_list'),
+    path('staff/<int:pk>/', views.staff_detail, name='staff_detail'),
+    path('staff/new/', views.staff_create, name='staff_create'),
+    path('staff/<int:pk>/edit/', views.staff_update, name='staff_update'),
+    path('staff/<int:pk>/delete/', views.staff_delete, name='staff_delete'),
+
+    # Inventory
+    path('inventory/', views.inventory_list, name='inventory_list'),
+    path('inventory/<int:pk>/', views.inventory_detail, name='inventory_detail'),
+    path('inventory/new/', views.inventory_create, name='inventory_create'),
+    path('inventory/<int:pk>/edit/', views.inventory_update, name='inventory_update'),
+    path('inventory/<int:pk>/delete/', views.inventory_delete, name='inventory_delete'),
+]
+
+	    
+	    
+	</div>
+	
 	<footer>
 		<p>&copy; 2023 Cafe Back of House Management</p>
 	</footer>
