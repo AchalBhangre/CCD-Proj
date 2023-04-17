@@ -337,17 +337,22 @@
 </style>
   {% load static %}
   <body>
+       
   
     <div class="navbar-fixed">
         <nav class=" brown darken-2 ">
             <div class="nav-wrapper container">
+                
               <a href="#" class="brand-logo">Beans’n Cream Cafe</a>
+                
               <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
               <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="#"> Home<i class="material-icons left">home</i></a></li>
                 <li><a href="#section white center">Back of House<i class="material-icons left">content_paste</i></a></li>
                 <li><a href="#aboutus">About Us</a></li>
                 <li><a href="#contact">Contact Us</a></li>
+            
+                
               </ul>
             </div>
         </nav>
@@ -357,6 +362,8 @@
         <li><a href="#section white center">Carte-du-Jour<i class="material-icons left">content_paste</i></a></li>
         <li><a href="#aboutus">About Us</a></li>
         <li><a href="#contact">Contact Us</a></li>
+        
+        
     </ul>
     
     <div class="slider">
@@ -385,7 +392,16 @@
         </ul>
     </div>
   
-  
+  <div>
+      {% if user.is_authenticated %}
+                    <div class="table-title"> <h4>Here you are, {{user.username}}...Back of House</h4>
+                    <a href="{% url 'sign_out' %}">Sign out</a>
+                {% else %}
+                    <a href="{% url 'sign_in' %}">Sign in</a> 
+                    <a href="{% url 'sign_up' %}">Sign up</a>
+                {% endif %}
+      </div>
+      </div>
     <div class="container">
         <div class="table-wrapper">
             <div class="table-title">
@@ -663,9 +679,9 @@
     <div class="section white center" id="aboutus">
         <div class="row container">
             <h2 class="header">About US</h2>
-            <p class="gray-text text-darken-3">Beans’n Cream Cafe is a simple HTML website template provided by The Web Weavers. Feel free
-                to use it for your cafe or coffee shop. This layout is a mobile and tablet friendly.
-                 You can download and use this HTML one-page template for your business.</p>
+            <p class="gray-text text-darken-3">Beans’n Cream Cafe is a Application foe Back of House,  Feel free
+                to use it for your cafe or coffee shop. having funcatinality  Inventory Management,Menu Management, 
+                Staff Management,Order Management.</p>
             <a href="#" class="btn waves-effect waves-light brown darken-2">Read More</a>
         </div>
     </div>
@@ -688,8 +704,8 @@
         <div class="row container">
             <div class="col l8 s12 center-align move">
                 Beans’n Cream Cafe is a simple HTML website template provided by The Web Weavers. Feel free
-                to use it for your cafe or coffee shop. This layout is a mobile and tablet friendly.
-                 You can download and use this HTML one-page template for your business.
+                to use it for your cafe or coffee shop. back of house having Inventory Management,Menu Management, 
+                Staff Management,Order Management
             </div>
             <div class="col l4 s12 center">
                 <img src="https://cdn.pixabay.com/photo/2014/04/03/11/54/coffee-312521_1280.png" style="object-fit: contain;" height="200px" width="auto" alt="">

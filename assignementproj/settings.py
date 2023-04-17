@@ -14,7 +14,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+TEMP_DIR=os.path.join(BASE_DIR,'templates')
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
@@ -30,7 +30,8 @@ DEBUG = True
 
 #ALLOWED_HOSTS = ['5faffac2a4f2461995c46990a7a525d3.vfs.cloud9.eu-west-1.amazonaws.com']
 #ALLOWED_HOSTS = ['CoffeeProject-env.eba-9mr5ngvz.eu-west-1.elasticbeanstalk.com']
-ALLOWED_HOSTS = ['22181946-BOH-CCD-env.eba-bktdba5x.eu-west-1.elasticbeanstalk.com']
+#ALLOWED_HOSTS = ['22181946-BOH-CCD-env.eba-bktdba5x.eu-west-1.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -60,7 +61,7 @@ ROOT_URLCONF = 'assignementproj.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [TEMP_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -125,6 +126,8 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
+
+LOGIN_REDIRECT_URL='home'
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
