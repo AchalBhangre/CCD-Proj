@@ -4,7 +4,7 @@ This module contains the views for the Cafe Coffee Day application.
 These views handle requests from the user and return HTML templates responses.
 """
 from django.shortcuts import render, redirect
-from .models import CafeCoffeeDay,MenuItem
+from .models import CafeCoffeeDay, MenuItem
 
 
 # Create your views here.
@@ -14,7 +14,7 @@ def index(request):
     menuitem = MenuItem.objects.all()
     context = {
         'cafeshop': cafeshop,
-         'menuitem': menuitem,
+        'menuitem': menuitem,
     }
     return render(request, 'index.html', context)
 def add(request):
@@ -58,14 +58,12 @@ def update(request, id):
             )
         cafeshop.save()
         return redirect('home')
-        
-def delete(request,id):
+def delete(request, id):
     """Render the delete page of the website return the home
     """
     cafeshop = CafeCoffeeDay.objects.filter(id=id)
     cafeshop.delete()
     return redirect('home')
-    
 def view_menu(request):
     """ Render the index page of the website."""
     menuitem = MenuItem.objects.all()
@@ -73,9 +71,7 @@ def view_menu(request):
         'menuitem': menuitem,
     }
     return render(request, 'index.html', context)
-    
-    
-def addMenu(request):
+def add_menu(request):
     """Render the view menu page of the website. """
     if request.method == 'POST':
         item_name = request.POST.get('item_name')
@@ -92,3 +88,4 @@ def addMenu(request):
             )
         menuitem.save()
     return redirect('home')
+    
