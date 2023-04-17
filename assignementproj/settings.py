@@ -30,7 +30,7 @@ DEBUG = True
 
 #ALLOWED_HOSTS = ['5faffac2a4f2461995c46990a7a525d3.vfs.cloud9.eu-west-1.amazonaws.com']
 #ALLOWED_HOSTS = ['CoffeeProject-env.eba-9mr5ngvz.eu-west-1.elasticbeanstalk.com']
-ALLOWED_HOSTS = ['x22181956-2ndVersionCCD-env.eba-bwxs4ykt.eu-west-1.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['22181946-BOH-CCD-env.eba-bktdba5x.eu-west-1.elasticbeanstalk.com']
 
 
 # Application definition
