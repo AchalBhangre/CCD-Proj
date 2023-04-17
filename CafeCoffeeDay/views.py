@@ -42,7 +42,6 @@ def edit(request):
     return redirect(request, 'index.html', context)
 def update(request, id):
     """ Render the update page of the website.
-     return home page
      """
     if request.method == 'POST':
         fName = request.POST.get('fName')
