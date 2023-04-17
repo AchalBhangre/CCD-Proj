@@ -1,10 +1,11 @@
 """
-adding urls of the all the action path
+adding urls of the all the action
 """
+from django.contrib import admin
 from django.urls import path
 from . import views
 
-URL_PATTERNS = [
+urlpatterns = [
     path('', views.index, name='home'),
     path('add', views.add, name='add'),
     path('edit', views.edit, name='edit'),
