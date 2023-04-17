@@ -1,4 +1,8 @@
 #!/usr/bin/env python
+"""
+This module contains the views for the Cafe Coffee Day application.
+
+"""
 import os
 import sys
 
