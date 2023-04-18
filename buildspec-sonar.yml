@@ -23,6 +23,8 @@ phases:
       - sleep 5
       - curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=AchalBhangre_CCD-Proj >result.json
       - cat result.json
-      - if [ $(jq -r '.projectStatus.status' result.json) = ERROR ] ; then $CODEBUILD_BUILD_SUCCEEDING -eq 0 ;fi
+      - if ! command -v jq >/dev/null 2>&1; then echo "jq not found"; exit 1; fi
+      - if [ "$(jq -r '.projectStatus.status' result.json)" = "ERROR" ]; then $CODEBUILD_BUILD_SUCCEEDING -eq 0; fi
+
 
 
